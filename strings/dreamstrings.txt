@@ -20,6 +20,49 @@ the %ADJECTIVE% captain
 %A% %ADJECTIVE% gun
 the sun
 the engine
+krout
+mic
+coon
+wop
+Beard-goblin 
+Flea-bearded alestain 
+Stunty 
+Pump Sucker
+Stone shitter 
+half-sized alcoholic 
+rock eater 
+Stone Domes 
+Gutter Rats 
+Angry Footstool 
+Rockhead 
+Hairy Halfling 
+Tunnel Rat 
+Pubic Face 
+Cave Hippo 
+Oremonger 
+Bushies 
+Gut Draggers 
+Knoties 
+Lumberfoot 
+Half-Man 
+Gnomes 
+stunt  
+gold digger  
+dirt-licker  
+teapot  
+hammer midget  
+copper polisher  
+rock bitter  
+stone humper 
+keg belly  
+pyrite-muncher  
+giant snot 
+Hairy Brewery 
+jap
+chink
+nip
+squint
+kike 
 the station
 %A% %ADJECTIVE% planet
 the medical bay
