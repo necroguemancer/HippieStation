@@ -60,7 +60,6 @@
 /obj/item/projectile/bullet/c38
 	name = ".38 bullet"
 	damage = 15
-	knockdown = 60
 	stamina = 50
 
 // 10mm (Stechkin)
@@ -229,8 +228,8 @@
 
 /obj/item/projectile/bullet/shotgun_stunslug
 	name = "stunslug"
-	damage = 5
-	knockdown = 100
+	damage_type = STAMINA
+	damage = 60
 	stutter = 5
 	jitter = 20
 	range = 7
