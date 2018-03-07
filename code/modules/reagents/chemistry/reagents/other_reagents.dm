@@ -208,6 +208,12 @@
 	..()
 
 /datum/reagent/water/holywater/on_mob_life(mob/living/M)
+	M.adjustBruteLoss(-.5*REM, 0)
+	M.adjustFireLoss(-.5*REM, 0)
+	M.adjustOxyLoss(-.5*REM, 0)
+	M.adjustToxLoss(-.5*REM, 0)
+	..()
+	. = 1
 	if(!data)
 		data = 1
 	data++
