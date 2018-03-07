@@ -57,6 +57,11 @@
 	..()
 	. = 1
 
+/datum/reagent/drug/nicotine/addiction_act1(mob/living/M)
+	M.adjustToxLoss(1.5*REM, 0)
+	..()
+	. = 1
+
 /datum/reagent/drug/menthol
 	name = "Menthol"
 	id = "menthol"
