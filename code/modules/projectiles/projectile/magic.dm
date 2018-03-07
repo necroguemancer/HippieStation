@@ -321,6 +321,7 @@
 	name = "arcane bolt"
 	icon_state = "arcane_barrage"
 	damage = 20
+	stamina = 20
 	damage_type = BURN
 	nodamage = 0
 	armour_penetration = 0
