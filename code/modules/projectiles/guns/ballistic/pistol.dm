@@ -83,5 +83,5 @@
 	name = "/improper Seburo M2"
 	desc = "A Seburo M2. Probably the oldest piece of equipment on the station, and it's the last line of defense between your life and the greytide."
 	icon_state = "m2"
-	mag_type = /obj/item/ammo_box/magazine/38s
+	mag_type = /obj/item/ammo_box/magazine/sm2
 	can_suprpress = FALSE
