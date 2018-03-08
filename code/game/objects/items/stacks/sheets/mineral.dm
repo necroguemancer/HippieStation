@@ -119,6 +119,9 @@ GLOBAL_LIST_INIT(diamond_recipes, list ( \
 	recipes = GLOB.diamond_recipes
 	. = ..()
 
+/obj/item/stack/sheet/mineral/diamond/twenty
+	amount = 20
+
 /*
  * Uranium
  */
@@ -142,6 +145,9 @@ GLOBAL_LIST_INIT(uranium_recipes, list ( \
 /obj/item/stack/sheet/mineral/uranium/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.uranium_recipes
 	. = ..()
+	
+/obj/item/stack/sheet/mineral/uranium/twenty
+	amount = 20
 
 /*
  * Plasma
@@ -183,6 +189,9 @@ GLOBAL_LIST_INIT(plasma_recipes, list ( \
 /obj/item/stack/sheet/mineral/plasma/fire_act(exposed_temperature, exposed_volume)
 	atmos_spawn_air("plasma=[amount*10];TEMP=[exposed_temperature]")
 	qdel(src)
+	
+/obj/item/stack/sheet/mineral/plasma/twenty
+	amount = 20
 
 /*
  * Gold
@@ -210,6 +219,9 @@ GLOBAL_LIST_INIT(gold_recipes, list ( \
 /obj/item/stack/sheet/mineral/gold/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.gold_recipes
 	. = ..()
+	
+/obj/item/stack/sheet/mineral/gold/twenty
+	amount = 20
 
 /*
  * Silver
@@ -236,6 +248,9 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
 /obj/item/stack/sheet/mineral/silver/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.silver_recipes
 	. = ..()
+	
+/obj/item/stack/sheet/mineral/silver/twenty
+	amount = 20
 
 /*
  * Clown
@@ -258,6 +273,9 @@ GLOBAL_LIST_INIT(bananium_recipes, list ( \
 /obj/item/stack/sheet/mineral/bananium/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.bananium_recipes
 	. = ..()
+
+/obj/item/stack/sheet/mineral/bananium/twenty
+	amount = 20
 
 /*
  * Titanium
@@ -286,6 +304,8 @@ GLOBAL_LIST_INIT(titanium_recipes, list ( \
 /obj/item/stack/sheet/mineral/titanium/fifty
 	amount = 50
 
+/obj/item/stack/sheet/mineral/titanium/twenty
+	amount = 20
 
 /*
  * Plastitanium
