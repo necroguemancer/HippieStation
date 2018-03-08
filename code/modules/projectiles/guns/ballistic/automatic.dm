@@ -423,3 +423,14 @@
 	..()
 	icon_state = "oldrifle[magazine ? "-[CEILING(get_ammo(0)/4, 1)*4]" : ""]"
 	return
+	
+/obj/item/gun/ballistic/automatic/riotrifle
+	name = "riot rifle"
+	desc= "An ancient, police issue riot rifle chambered in 5.56mm"
+	icon_state = "riotrifle"
+	item_state = "arg"
+	mag_type = /obj/item/ammo_box/magazine/riot
+	fire_delay = 1
+	can_supress = FALSE
+	burst_size = 1
+	fire_sound = '/sound/weapons/gunshot.ogg'
