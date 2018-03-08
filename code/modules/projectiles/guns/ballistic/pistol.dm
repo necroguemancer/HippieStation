@@ -79,3 +79,9 @@
 		to_chat(user, "<span class='notice'>..and falls into view. Whew, that was a close one.</span>")
 		user.dropItemToGround(src)
 
+/obj/item/gun/ballistic/automatic/pistol/m2
+	name = "/improper Seburo M2"
+	desc = "A Seburo M2. Probably the oldest piece of equipment on the station, and it's the last line of defense between your life and the greytide."
+	icon_state = "m2"
+	mag_type = /obj/item/ammo_box/magazine/38s
+	can_suprpress = FALSE
