@@ -119,6 +119,12 @@
 	desc = "A 5.56mm bullet casing."
 	caliber = "a556"
 	projectile_type = /obj/item/projectile/bullet/a556
+	
+obj/item/ammo_casing/a556/a556r
+	name = "5.56mm NL casing"
+	desc = "A 5.56mm bullet casing with a rubber bullet."
+	caliber = "a556"
+	projectile type = /obj/item/projectile/bullet/556r
 
 // 40mm (Grenade Launcher)
 
