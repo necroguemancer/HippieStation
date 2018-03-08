@@ -192,7 +192,7 @@
 	description = "A powder derived from fish toxin, Rezadone can effectively treat genetic damage as well as restoring minor wounds. Overdose will cause intense nausea and minor toxin damage."
 	reagent_state = SOLID
 	color = "#669900" // rgb: 102, 153, 0
-	overdose_threshold = 30
+	overdose_threshold = 35
 	taste_description = "fish"
 
 /datum/reagent/medicine/rezadone/on_mob_life(mob/living/M)
@@ -294,7 +294,7 @@
 /datum/reagent/medicine/salglu_solution
 	name = "Saline-Glucose Solution"
 	id = "salglu_solution"
-	description = "Has a 33% chance per metabolism cycle to heal brute and burn damage. Can be used as a temporary blood substitute."
+	description = "Has a 40% chance per metabolism cycle to heal brute and burn damage. Can be used as a temporary blood substitute."
 	reagent_state = LIQUID
 	color = "#DCDCDC"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -312,7 +312,7 @@
 		var/new_blood_level = min(M.blood_volume + amount_to_add, maximum_reachable)
 		last_added = new_blood_level - M.blood_volume
 		M.blood_volume = new_blood_level
-	if(prob(33))
+	if(prob(40))
 		M.adjustBruteLoss(-0.5*REM, 0)
 		M.adjustFireLoss(-0.5*REM, 0)
 		. = 1
@@ -345,8 +345,8 @@
 	if(iscarbon(M))
 		var/mob/living/carbon/N = M
 		N.hal_screwyhud = SCREWYHUD_HEALTHY
-	M.adjustBruteLoss(-0.25*REM, 0)
-	M.adjustFireLoss(-0.25*REM, 0)
+	M.adjustBruteLoss(-0.20*REM, 0)
+	M.adjustFireLoss(-0.35*REM, 0)
 	..()
 	. = 1
 
@@ -1280,4 +1280,3 @@
 			M.adjustStaminaLoss(1.5*REM, 0)
 	..()
 	. = 1
-
