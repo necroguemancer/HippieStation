@@ -29,6 +29,9 @@
 	for(var/mob/living/L in GLOB.player_list)
 		if(locate(/obj/effect/proc_holder/spell/aoe_turf/conjure/timestop) in L.mind.spell_list) //People who can stop time are immune to its effects
 			immune[L] = TRUE
+		for(var/obj/item/I in L.held_items)
+			if (I.type == /obj/item/weapon/stopwatch)
+				immune[L] = TRUE
 	if(start)
 		timestop()
 
