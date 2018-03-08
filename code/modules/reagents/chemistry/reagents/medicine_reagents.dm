@@ -563,7 +563,7 @@
 	M.AdjustStun(-10, 0)
 	M.AdjustKnockdown(-10, 0)
 	M.AdjustUnconscious(-10, 0)
-	M.adjustStaminaLoss(-.5*REM, 0)
+	M.adjustStaminaLoss(-1*REM, 0)
 	M.adjustToxLoss(1*REM, 0)
 	..()
 	. = 1
@@ -1160,7 +1160,7 @@
 	M.AdjustStun(-10, 0)
 	M.AdjustKnockdown(-10, 0)
 	M.adjustStaminaLoss(-1, 0)
-	M.adjustToxLoss(reac_volume)
+	M.adjustToxLoss(5*REM, 0)
 	. = 1
 	..()
 
