@@ -241,7 +241,7 @@
 	max_ammo = 20
 	multiple_sprites = 2
 	
-/obj/item/ammo_box/magazine/sm3
+/obj/item/ammo_box/magazine/sm2
 	name = "m2 magazine ".38 auto"
 	desc = "An ancient m2 magazine, held together by rust and criminal tears."
 	icon_state = "38s"
