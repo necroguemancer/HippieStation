@@ -446,6 +446,22 @@
 	materials = list(MAT_METAL = 30000)
 	build_path = /obj/item/ammo_box/c38
 	category = list("initial", "Security")
+	
+/datum/design/sm2
+	name = "M2 magazine (.38 auto)
+	id = "m2mag"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 60000)
+	build_path = /obj/item/ammo_box/sm2
+	category = list("initial", "Security")
+	
+/datum/design/riotmag
+	name = "Riot Rifle magazine (5.56mm rubber)
+	id = "riotmag"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 100000)
+	build_path = /obj/item/ammo_box/riot
+	category = list("initial", "Security")
 
 /datum/design/recorder
 	name = "Universal Recorder"
