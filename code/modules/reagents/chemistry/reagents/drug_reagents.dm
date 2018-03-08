@@ -57,7 +57,7 @@
 	..()
 	. = 1
 
-/datum/reagent/drug/nicotine/addiction_act1(mob/living/M)
+/datum/reagent/drug/nicotine/addiction_act_stage1(mob/living/M)
 	M.adjustToxLoss(1.5*REM, 0)
 	..()
 	. = 1
@@ -86,7 +86,7 @@
 	M.AdjustStun(-10, 0)
 	M.AdjustKnockdown(-10, 0)
 	M.AdjustUnconscious(-10, 0)
-	M.AdjustToxLoss(1*REM, 0)
+	M.adjustToxLoss(1*REM, 0)
 	..()
 	. = 1
 
