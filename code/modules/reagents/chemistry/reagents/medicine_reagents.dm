@@ -913,7 +913,7 @@
 		. = 1
 	..()
 	
-/datum/reagent/medicine/stimulants/addiction_act1(mob/living/M)
+/datum/reagent/medicine/stimulants/addiction_act_stage1(mob/living/M)
 	M.adjustToxLoss(1.5*REM, 0)
 	..()
 	. = 1
