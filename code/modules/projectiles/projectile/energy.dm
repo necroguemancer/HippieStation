@@ -13,12 +13,12 @@
 	name = "electrode"
 	icon_state = "spark"
 	color = "#FFFF00"
-	nodamage = 1
-	knockdown = 100
+	damage_type = 40
+	damage = 40
 	stutter = 5
 	jitter = 20
 	hitsound = 'sound/weapons/taserhit.ogg'
-	range = 7
+	range = 8
 	tracer_type = /obj/effect/projectile/tracer/stun
 	muzzle_type = /obj/effect/projectile/muzzle/stun
 	impact_type = /obj/effect/projectile/impact/stun

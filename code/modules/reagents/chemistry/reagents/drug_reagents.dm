@@ -36,17 +36,29 @@
 	description = "Slightly reduces stun times. If overdosed it will deal toxin and oxygen damage."
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
-	addiction_threshold = 30
+	addiction_threshold = 5
+	overdose_threshold = 50
 	taste_description = "smoke"
 
 /datum/reagent/drug/nicotine/on_mob_life(mob/living/M)
 	if(prob(1))
 		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
 		to_chat(M, "<span class='notice'>[smoke_message]</span>")
-	M.AdjustStun(-20, 0)
-	M.AdjustKnockdown(-20, 0)
-	M.AdjustUnconscious(-20, 0)
-	M.adjustStaminaLoss(-0.5*REM, 0)
+	M.AdjustStun(-10, 0)
+	M.AdjustKnockdown(-10, 0)
+	M.AdjustUnconscious(-1, 0)
+	M.adjustStaminaLoss(-0.25*REM, 0)
+	M.adjustToxLoss(1*REM, 0)
+	..()
+	. = 1
+	
+/datum/reagent/drug/nicotine/overdose_process(mob/living/M)
+	M.adjustToxLoss(1.5*REM, 0)
+	..()
+	. = 1
+
+/datum/reagent/drug/nicotine/addiction_act_stage1(mob/living/M)
+	M.adjustToxLoss(1.5*REM, 0)
 	..()
 	. = 1
 
@@ -65,21 +77,22 @@
 	reagent_state = LIQUID
 	color = "#FA00C8"
 	overdose_threshold = 20
-	addiction_threshold = 10
+	addiction_threshold = 5
 
 /datum/reagent/drug/crank/on_mob_life(mob/living/M)
 	if(prob(5))
 		var/high_message = pick("You feel jittery.", "You feel like you gotta go fast.", "You feel like you need to step it up.")
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.AdjustStun(-20, 0)
-	M.AdjustKnockdown(-20, 0)
-	M.AdjustUnconscious(-20, 0)
+	M.AdjustStun(-10, 0)
+	M.AdjustKnockdown(-10, 0)
+	M.AdjustUnconscious(-10, 0)
+	M.adjustToxLoss(1*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/crank/overdose_process(mob/living/M)
 	M.adjustBrainLoss(2*REM)
-	M.adjustToxLoss(2*REM, 0)
+	M.adjustToxLoss(3*REM, 0)
 	M.adjustBruteLoss(2*REM, 0)
 	..()
 	. = 1
@@ -89,7 +102,7 @@
 	..()
 
 /datum/reagent/drug/crank/addiction_act_stage2(mob/living/M)
-	M.adjustToxLoss(5*REM, 0)
+	M.adjustToxLoss(7.5*REM, 0)
 	..()
 	. = 1
 
@@ -100,7 +113,7 @@
 
 /datum/reagent/drug/crank/addiction_act_stage4(mob/living/M)
 	M.adjustBrainLoss(3*REM)
-	M.adjustToxLoss(5*REM, 0)
+	M.adjustToxLoss(7.5*REM, 0)
 	M.adjustBruteLoss(5*REM, 0)
 	..()
 	. = 1
@@ -163,7 +176,7 @@
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 20
-	addiction_threshold = 10
+	addiction_threshold = 5
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
 
 /datum/reagent/drug/methamphetamine/on_mob_add(mob/M)
@@ -182,12 +195,13 @@
 	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.AdjustStun(-40, 0)
-	M.AdjustKnockdown(-40, 0)
-	M.AdjustUnconscious(-40, 0)
-	M.adjustStaminaLoss(-2, 0)
+	M.AdjustStun(-20, 0)
+	M.AdjustKnockdown(-20, 0)
+	M.AdjustUnconscious(-20, 0)
+	M.adjustStaminaLoss(-1, 0)
 	M.Jitter(2)
 	M.adjustBrainLoss(0.25)
+	M.adjustToxLoss(1*REM, 0)
 	if(prob(5))
 		M.emote(pick("twitch", "shiver"))
 	..()
@@ -203,7 +217,7 @@
 		M.visible_message("<span class='danger'>[M]'s hands flip out and flail everywhere!</span>")
 		M.drop_all_held_items()
 	..()
-	M.adjustToxLoss(1, 0)
+	M.adjustToxLoss(1.5, 0)
 	M.adjustBrainLoss(pick(0.5, 0.6, 0.7, 0.8, 0.9, 1))
 	. = 1
 
@@ -236,7 +250,7 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(20)
 	M.Dizzy(20)
-	M.adjustToxLoss(5, 0)
+	M.adjustToxLoss(7.5, 0)
 	if(prob(50))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -249,7 +263,7 @@
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 20
-	addiction_threshold = 10
+	addiction_threshold = 5
 	taste_description = "salt" // because they're bathsalts?
 
 /datum/reagent/drug/bath_salts/on_mob_add(mob/M)
@@ -272,7 +286,7 @@
 		to_chat(M, "<span class='notice'>[high_message]</span>")
 	M.adjustStaminaLoss(-5, 0)
 	M.adjustBrainLoss(0.5)
-	M.adjustToxLoss(0.1, 0)
+	M.adjustToxLoss(1.1, 0)
 	M.hallucination += 10
 	if(M.canmove && !ismovableatom(M.loc))
 		step(M, pick(GLOB.cardinals))
@@ -333,7 +347,7 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(50)
 	M.Dizzy(50)
-	M.adjustToxLoss(5, 0)
+	M.adjustToxLoss(7.5, 0)
 	M.adjustBrainLoss(10)
 	if(prob(50))
 		M.emote(pick("twitch","drool","moan"))
@@ -351,8 +365,8 @@
 	var/high_message = pick("You feel amped up.", "You feel ready.", "You feel like you can push it to the limit.")
 	if(prob(5))
 		to_chat(M, "<span class='notice'>[high_message]</span>")
-	M.adjustStaminaLoss(-18, 0)
-	M.adjustToxLoss(0.5, 0)
+	M.adjustStaminaLoss(-9, 0)
+	M.adjustToxLoss(1.5, 0)
 	if(prob(50))
 		M.losebreath++
 		M.adjustOxyLoss(1, 0)
