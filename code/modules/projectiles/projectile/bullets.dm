@@ -132,6 +132,11 @@
 /obj/item/projectile/bullet/a556
 	name = "5.56mm bullet"
 	damage = 35
+	
+/obj/item/projectile/bullet/a556/556r
+	name = "5.56mm rubber bullet"
+	damage = 10
+	stamina = 50
 
 // 40mm (Grenade Launcher
 
