@@ -15,7 +15,7 @@
 	var/stunforce = 140
 	var/status = 0
 	var/obj/item/stock_parts/cell/high/cell
-	var/hitcost = 1000
+	var/hitcost = 3000
 	var/throw_hit_chance = 35
 
 /obj/item/melee/baton/get_cell()
@@ -187,7 +187,7 @@
 	force = 3
 	throwforce = 5
 	stunforce = 100
-	hitcost = 2000
+	hitcost = 6000
 	throw_hit_chance = 10
 	slot_flags = SLOT_BACK
 	var/obj/item/device/assembly/igniter/sparkler = 0

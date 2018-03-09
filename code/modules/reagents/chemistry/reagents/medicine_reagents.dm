@@ -82,14 +82,14 @@
 
 /datum/reagent/medicine/synaptizine/on_mob_life(mob/living/M)
 	M.drowsyness = max(M.drowsyness-5, 0)
-	M.AdjustStun(-20, 0)
-	M.AdjustKnockdown(-20, 0)
-	M.AdjustUnconscious(-20, 0)
+	M.AdjustStun(-10, 0)
+	M.AdjustKnockdown(-10, 0)
+	M.AdjustUnconscious(-10, 0)
 	if(holder.has_reagent("mindbreaker"))
 		holder.remove_reagent("mindbreaker", 5)
 	M.hallucination = max(0, M.hallucination - 10)
 	if(prob(30))
-		M.adjustToxLoss(1, 0)
+		M.adjustToxLoss(1.5, 0)
 		. = 1
 	..()
 
@@ -385,8 +385,8 @@
 		if (M.stat == DEAD)
 			show_message = 0
 		if(method in list(PATCH, TOUCH))
-			M.adjustBruteLoss(-1.25 * reac_volume)
-			M.adjustFireLoss(-1.25 * reac_volume)
+			M.adjustBruteLoss(-1.5 * reac_volume)
+			M.adjustFireLoss(-1.5 * reac_volume)
 			if(show_message)
 				to_chat(M, "<span class='danger'>You feel your burns and bruises healing! It stings like hell!</span>")
 	..()
@@ -414,14 +414,14 @@
 	description = "Slowly heals all damage types. Overdose will cause damage in all types instead."
 	reagent_state = LIQUID
 	color = "#DCDCDC"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
-	overdose_threshold = 30
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 40
 
 /datum/reagent/medicine/omnizine/on_mob_life(mob/living/M)
-	M.adjustToxLoss(-0.5*REM, 0)
-	M.adjustOxyLoss(-0.5*REM, 0)
-	M.adjustBruteLoss(-0.5*REM, 0)
-	M.adjustFireLoss(-0.5*REM, 0)
+	M.adjustToxLoss(-1*REM, 0)
+	M.adjustOxyLoss(-1*REM, 0)
+	M.adjustBruteLoss(-1*REM, 0)
+	M.adjustFireLoss(-1*REM, 0)
 	..()
 	. = 1
 
@@ -545,7 +545,7 @@
 	color = "#D2FFFA"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 45
-	addiction_threshold = 30
+	addiction_threshold = 5
 
 /datum/reagent/medicine/ephedrine/on_mob_add(mob/M)
 	..()
@@ -560,44 +560,45 @@
 	..()
 
 /datum/reagent/medicine/ephedrine/on_mob_life(mob/living/M)
-	M.AdjustStun(-20, 0)
-	M.AdjustKnockdown(-20, 0)
-	M.AdjustUnconscious(-20, 0)
+	M.AdjustStun(-10, 0)
+	M.AdjustKnockdown(-10, 0)
+	M.AdjustUnconscious(-10, 0)
 	M.adjustStaminaLoss(-1*REM, 0)
+	M.adjustToxLoss(1*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/medicine/ephedrine/overdose_process(mob/living/M)
 	if(prob(33))
-		M.adjustToxLoss(0.5*REM, 0)
+		M.adjustToxLoss(1.25*REM, 0)
 		M.losebreath++
 		. = 1
 	..()
 
 /datum/reagent/medicine/ephedrine/addiction_act_stage1(mob/living/M)
 	if(prob(33))
-		M.adjustToxLoss(2*REM, 0)
+		M.adjustToxLoss(3*REM, 0)
 		M.losebreath += 2
 		. = 1
 	..()
 
 /datum/reagent/medicine/ephedrine/addiction_act_stage2(mob/living/M)
 	if(prob(33))
-		M.adjustToxLoss(3*REM, 0)
+		M.adjustToxLoss(4.5*REM, 0)
 		M.losebreath += 3
 		. = 1
 	..()
 
 /datum/reagent/medicine/ephedrine/addiction_act_stage3(mob/living/M)
 	if(prob(33))
-		M.adjustToxLoss(4*REM, 0)
+		M.adjustToxLoss(6*REM, 0)
 		M.losebreath += 4
 		. = 1
 	..()
 
 /datum/reagent/medicine/ephedrine/addiction_act_stage4(mob/living/M)
 	if(prob(33))
-		M.adjustToxLoss(5*REM, 0)
+		M.adjustToxLoss(7.5*REM, 0)
 		M.losebreath += 5
 		. = 1
 	..()
@@ -625,7 +626,7 @@
 	color = "#A9FBFB"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	addiction_threshold = 25
+	addiction_threshold = 6
 
 /datum/reagent/medicine/morphine/on_mob_add(mob/M)
 	..()
@@ -877,6 +878,7 @@
 	color = "#78008C"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
+	addiction_threshold = 5
 
 /datum/reagent/medicine/stimulants/on_mob_add(mob/M)
 	..()
@@ -893,23 +895,28 @@
 /datum/reagent/medicine/stimulants/on_mob_life(mob/living/M)
 	if(M.health < 50 && M.health > 0)
 		M.adjustOxyLoss(-1*REM, 0)
-		M.adjustToxLoss(-1*REM, 0)
+		M.adjustToxLoss(1*REM, 0)
 		M.adjustBruteLoss(-1*REM, 0)
 		M.adjustFireLoss(-1*REM, 0)
-	M.AdjustStun(-60, 0)
-	M.AdjustKnockdown(-60, 0)
-	M.AdjustUnconscious(-60, 0)
-	M.adjustStaminaLoss(-5*REM, 0)
+	M.AdjustStun(-30, 0)
+	M.AdjustKnockdown(-30, 0)
+	M.AdjustUnconscious(-30, 0)
+	M.adjustStaminaLoss(-2.5*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/medicine/stimulants/overdose_process(mob/living/M)
 	if(prob(33))
 		M.adjustStaminaLoss(2.5*REM, 0)
-		M.adjustToxLoss(1*REM, 0)
+		M.adjustToxLoss(1.5*REM, 0)
 		M.losebreath++
 		. = 1
 	..()
+	
+/datum/reagent/medicine/stimulants/addiction_act_stage1(mob/living/M)
+	M.adjustToxLoss(1.5*REM, 0)
+	..()
+	. = 1
 
 /datum/reagent/medicine/insulin
 	name = "Insulin"
@@ -1019,7 +1026,7 @@
 	description = "Has a high chance to heal all types of damage. Overdose instead causes it."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	overdose_threshold = 60
 	taste_description = "grossness"
 
 /datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/M)
@@ -1146,18 +1153,19 @@
 	id = "changelingadrenaline"
 	description = "Reduces the duration of unconciousness, knockdown and stuns. Restores stamina, but deals toxin damage when overdosed."
 	color = "#C8A5DC"
-	overdose_threshold = 30
+	overdose_threshold = 20
 
 /datum/reagent/medicine/changelingadrenaline/on_mob_life(mob/living/M as mob)
-	M.AdjustUnconscious(-20, 0)
-	M.AdjustStun(-20, 0)
-	M.AdjustKnockdown(-20, 0)
+	M.AdjustUnconscious(-10, 0)
+	M.AdjustStun(-10, 0)
+	M.AdjustKnockdown(-10, 0)
 	M.adjustStaminaLoss(-1, 0)
+	M.adjustToxLoss(5*REM, 0)
 	. = 1
 	..()
 
 /datum/reagent/medicine/changelingadrenaline/overdose_process(mob/living/M as mob)
-	M.adjustToxLoss(1, 0)
+	M.adjustToxLoss(2, 0)
 	. = 1
 	..()
 

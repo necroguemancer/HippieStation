@@ -271,7 +271,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
 	throwforce = 20 //This is never used on mobs since this has a 100% embed chance.
-	throw_speed = 4
+	throw_speed = 7
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 100, "embedded_fall_chance" = 0)
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = IS_SHARP
@@ -288,9 +288,9 @@
 	flags_1 = CONDUCT_1
 	force = 3
 	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 6
+	throwforce = 7
+	throw_speed = 5
+	throw_range = 8
 	materials = list(MAT_METAL=12000)
 	hitsound = 'sound/weapons/genhit.ogg'
 	attack_verb = list("stubbed", "poked")
@@ -318,7 +318,7 @@
 		sharpness = IS_BLUNT
 
 /obj/item/switchblade/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] own throat with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] own throat with [src]! FUCKING METAL!</span>")
 	return (BRUTELOSS)
 
 /obj/item/phone
@@ -326,7 +326,7 @@
 	desc = "Should anything ever go wrong..."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "red_phone"
-	force = 3
+	force = 5
 	throwforce = 2
 	throw_speed = 3
 	throw_range = 4
@@ -353,7 +353,7 @@
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=50)
-	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed")
+	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed", "punished")
 
 /obj/item/staff
 	name = "wizard staff"
@@ -362,7 +362,7 @@
 	icon_state = "staff"
 	lefthand_file = 'icons/mob/inhands/weapons/staves_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/staves_righthand.dmi'
-	force = 3
+	force = 4
 	throwforce = 5
 	throw_speed = 2
 	throw_range = 5
@@ -405,19 +405,19 @@
 
 /obj/item/mounted_chainsaw
 	name = "mounted chainsaw"
-	desc = "A chainsaw that has replaced your arm."
+	desc = "A chainsaw that has replaced your arm. Holy shit."
 	icon_state = "chainsaw_on"
 	item_state = "mounted_chainsaw"
 	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	flags_1 = NODROP_1 | ABSTRACT_1 | DROPDEL_1
 	w_class = WEIGHT_CLASS_HUGE
-	force = 24
+	force = 29
 	throwforce = 0
 	throw_range = 0
 	throw_speed = 0
 	sharpness = IS_SHARP
-	attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
+	attack_verb = list("sawed", "torn", "cut", "chopped", "diced", "brutalised")
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 
 /obj/item/mounted_chainsaw/Destroy()
@@ -447,7 +447,7 @@
 	name = "tail club"
 	desc = "For the beating to death of lizards with their own tails."
 	icon_state = "tailclub"
-	force = 14
+	force = 15
 	throwforce = 1 // why are you throwing a club do you even weapon
 	throw_speed = 1
 	throw_range = 1
@@ -463,10 +463,11 @@
 	name = "cat o' nine tails"
 	desc = "A whip fashioned from the severed tails of cats."
 	icon_state = "catwhip"
+	force = 15
 
 /obj/item/melee/skateboard
 	name = "skateboard"
-	desc = "A skateboard. It can be placed on its wheels and ridden, or used as a strong weapon."
+	desc = "Radical Bruh"
 	icon_state = "skateboard"
 	item_state = "skateboard"
 	force = 12
@@ -486,7 +487,7 @@
 	item_state = "baseball_bat"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 10
+	force = 15
 	throwforce = 12
 	attack_verb = list("beat", "smacked")
 	w_class = WEIGHT_CLASS_HUGE
@@ -627,7 +628,7 @@
 	item_state = "extendohand"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 0
+	force = 5 //Except it's actully fucking deadly.
 	throwforce = 5
 	reach = 2
 
