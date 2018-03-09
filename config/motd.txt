@@ -1,5 +1,5 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Space Station 13!</h1>
+<h1>Welcome to RogueStation!</h1>
 
-<i>This server is running a /tg/station 13 Git build.</i>
+<h3>Join our Discord over at: https://discord.gg/xFV5Rr8</h3>
