@@ -1,4 +1,6 @@
-sound/ambience/title1.ogg
-sound/ambience/title2.ogg
-sound/ambience/title3.ogg
-sound/ambience/clown.ogg
+C:\Users\Bondle\Documents\GitHub\RogueStation\config\title_music\JacksonandHisComputerbandSMASHMinidouxTjZMyLemXo.ogg
+C:\Users\Bondle\Documents\GitHub\RogueStation\config\title_music\KimoSwitchFriends7o6z2hbeNX4.ogg
+C:\Users\Bondle\Documents\GitHub\RogueStation\config\title_music\MakeoutVideotapeIslandGrooviesTCeNZ8anYA.ogg
+C:\Users\Bondle\Documents\GitHub\RogueStation\config\title_music\NeverhoodOSTKlaymanShuffleOnp0JLNIN0.ogg
+C:\Users\Bondle\Documents\GitHub\RogueStation\config\title_music\SUBWAYSh9wualcJuE4.ogg
+C:\Users\Bondle\Documents\GitHub\RogueStation\config\title_music\TallyHallAa7UTVy2w4M.ogg
