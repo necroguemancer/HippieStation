@@ -448,7 +448,7 @@
 	category = list("initial", "Security")
 	
 /datum/design/sm2
-	name = "M2 magazine (.38 auto)
+	name = "M2 magazine (.38 auto)"
 	id = "m2mag"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 60000)
@@ -456,7 +456,7 @@
 	category = list("initial", "Security")
 	
 /datum/design/riotmag
-	name = "Riot Rifle magazine (5.56mm rubber)
+	name = "Riot Rifle magazine (5.56mm rubber)"
 	id = "riotmag"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 100000)
