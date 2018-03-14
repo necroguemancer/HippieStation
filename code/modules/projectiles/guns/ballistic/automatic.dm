@@ -431,6 +431,5 @@
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/riot
 	fire_delay = 1
-	can_supress = FALSE
+	can_suppress = FALSE
 	burst_size = 1
-	fire_sound = '/sound/weapons/gunshot.ogg'
