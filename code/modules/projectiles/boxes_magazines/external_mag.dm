@@ -232,6 +232,22 @@
 	desc = "An extremely powerful round capable of passing straight through cover and anyone unfortunate enough to be behind it."
 	ammo_type = /obj/item/ammo_casing/p50/penetrator
 	max_ammo = 5
+	
+/obj/item/ammo_box/magazine/riot
+	name = "riot magazine (5.56mm)"
+	desc = "A magazine for a police issue riot rifle."
+	icon_state = "556r"
+	ammo_type = /obj/item/ammo_casing/a556/a556r
+	max_ammo = 20
+	multiple_sprites = 2
+	
+/obj/item/ammo_box/magazine/sm2
+	name = "m2 magazine (.38 auto)"
+	desc = "An ancient m2 magazine, held together by rust and criminal tears."
+	icon_state = "38s"
+	ammo_type = /obj/item/ammo_casing/c38
+	max_ammo = 13
+	multiple_sprites = 2
 
 //// SAW MAGAZINES
 

@@ -98,6 +98,7 @@
 
 /obj/structure/closet/secure_closet/warden/PopulateContents()
 	..()
+	new /obj/item/gun/energy/e_gun/advtaser(src)
 	new /obj/item/device/radio/headset/headset_sec(src)
 	new /obj/item/clothing/suit/armor/vest/warden(src)
 	new /obj/item/clothing/head/warden(src)
@@ -122,6 +123,7 @@
 
 /obj/structure/closet/secure_closet/security/PopulateContents()
 	..()
+	new /obj/item/gun/energy/e_gun/advtaser(src)
 	new /obj/item/clothing/suit/armor/vest(src)
 	new /obj/item/clothing/head/helmet/sec(src)
 	new /obj/item/device/radio/headset/headset_sec(src)
@@ -172,6 +174,7 @@
 
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
+	new /obj/item/gun/energy/e_gun/advtaser(src)
 	new /obj/item/clothing/under/rank/det(src)
 	new /obj/item/clothing/suit/det_suit(src)
 	new /obj/item/clothing/head/fedora/det_hat(src)
