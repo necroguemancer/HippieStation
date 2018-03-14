@@ -242,7 +242,7 @@
 	multiple_sprites = 2
 	
 /obj/item/ammo_box/magazine/sm2
-	name = "m2 magazine ".38 auto"
+	name = "m2 magazine (.38 auto)"
 	desc = "An ancient m2 magazine, held together by rust and criminal tears."
 	icon_state = "38s"
 	ammo_type = /obj/item/ammo_casing/c38
