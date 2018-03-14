@@ -452,7 +452,7 @@
 	id = "m2mag"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 60000)
-	build_path = /obj/item/ammo_box/sm2
+	build_path = /obj/item/ammo_box/magazine/sm2
 	category = list("initial", "Security")
 	
 /datum/design/riotmag
@@ -460,7 +460,7 @@
 	id = "riotmag"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 100000)
-	build_path = /obj/item/ammo_box/riot
+	build_path = /obj/item/ammo_box/magazine/riot
 	category = list("initial", "Security")
 
 /datum/design/recorder
